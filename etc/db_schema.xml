@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<!--
+/**
+ * Xtendable_CustomTrackingUrl
+ *
+ * @see README.md
+ *
+ */
+-->
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sales_shipment_track">
+        <column name="url" nullable="true" xsi:type="varchar" comment="tracking url" length="255"/>
+    </table>
+</schema>

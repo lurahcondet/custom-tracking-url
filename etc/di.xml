@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<!--
+/**
+ * Xtendable_CustomTrackingUrl
+ *
+ * @see README.md
+ *
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Shipping\Controller\Adminhtml\Order\ShipmentLoader">
+        <plugin name="custom_tracking_url_shipment_loader" type="Xtendable\CustomTrackingUrl\Plugin\ShipmentLoader"/>
+    </type>
+    <type name="Magento\Sales\Model\Order\ShipmentDocumentFactory">
+        <plugin name="custom_tracking_url_shipment_document" type="Xtendable\CustomTrackingUrl\Plugin\ShipmentDocument"/>
+    </type>
+    <type name="Magento\Sales\Model\Order\Shipment\TrackFactory">
+        <plugin name="custom_tracking_url_shipment_track" type="Xtendable\CustomTrackingUrl\Plugin\ShipmentTrack"/>
+    </type>    
+    <type name="Magento\Sales\Api\Data\ShipmentTrackInterfaceFactory">
+        <plugin name="custom_tracking_url_shipment_track_interface" type="Xtendable\CustomTrackingUrl\Plugin\ShipmentTrackInterface"/>
+    </type>
+    <type name="Magento\Shipping\Model\Order\Track">
+        <plugin name="custom_tracking_url_shipment_track_info" type="Xtendable\CustomTrackingUrl\Plugin\TrackInfo"/>
+    </type>
+
+</config>
